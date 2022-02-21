@@ -1,10 +1,9 @@
-fetch("http://localhost:3000/api/products") /*-- d'abord il fetch des données puis les passes à addkanap*/
+fetch("http://localhost:3000/api/products") /*--  fetch des données puis les passes à addkanap*/
 .then((res) => res.json())
 .then((data) => {
     console.log(data)
     return addKanap(data)
-}) /*-- quand tu reçois du data tu le passes à la fonction addkanap; ne pas oublier le return*/ 
- 
+}) /*reçois du data et passes à la fonction addkanap;*/ 
 
 function addKanap(data){
 
@@ -14,13 +13,14 @@ function addKanap(data){
         const imageUrl = data[i].imageUrl
         const altTxt = data[i].altTxt
         const name = data[i].name
-        const description = data[i].description /* dans ces 5 premieres lignes add product viens recupérer les données du premier élément*/
+        const description = data[i].description /* 5 premieres lignes add kanap viens recupérer les données du premier élément*/
 
-        const anchor = makeAnchor(id);                 /* il va créer un anchor*/
-        const article = makeArticle();                 /* il va créer un article*/
-        const image = makeImage(imageUrl, altTxt)       /* il va créer une image*/
-        const h3 = makeH3(name);                        /* il va créer un h3*/
-        const paragraph = makeParagraph(description);   /* il va créer un paragraphe*/
+        const anchor = makeAnchor(id);                 /*créer un anchor*/
+        
+        const image = makeImage(imageUrl, altTxt)       /*créer une image*/
+        const h3 = makeH3(name);                        /*créer un h3*/
+        const paragraph = makeParagraph(description);
+        const article = document.createElement("article")  /*créer un article*/
 
 
         article.appendChild(image)
@@ -34,8 +34,8 @@ function addKanap(data){
 
 function makeAnchor(id){
     const anchor = document.createElement("a")
-    anchor.href = "./product.html?id=42" + id
-    return anchor /* le return ici nous dit que on veut que la fonction nous retourne anchor en sortie*/
+    anchor.href = "./product.html?id=" + id
+    return anchor /* fonction nous retourne anchor en sortie*/
 }
 
 function appendChildren(anchor, article){
@@ -51,11 +51,7 @@ function makeImage(imageUrl, altTxt){
     return image
 }
 
-function makeArticle(){
-    const article = document.createElement("article")
-    return article
-}
-
+/*Création d'un H3*/
 function makeH3(name){
     const h3 =  document.createElement("h3")
     h3.textContent = name;
@@ -63,6 +59,7 @@ function makeH3(name){
     return h3 /* ici on oublie pas le return pcq on va en avoir besoin pour appender plus tard*/
 }
 
+/* Création d'un paragraphe qui va être introduit avec une classe*/
 function makeParagraph(description){
     const paragraph = document.createElement("p")
     paragraph.textContent = description

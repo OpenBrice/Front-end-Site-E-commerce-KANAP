@@ -17,6 +17,8 @@ back-end. Par exemple, pas de chiffre dans un champ prénom.
 
 # API
 L’API n’est actuellement que dans sa première version. La requête post qu’il faudra formuler pour passer une commande ne prend pas encore en considération la quantité ni la couleur des produits achetés.
-                                                                                                                                                                                                                                                                                                                # Technologies utilisées                                                                                                                                                                                                                                                                                                                  HTML, CSS, JavaScript.
+
+# Technologies utilisées
+HTML, CSS, JavaScript.
 URL des API
 ● Catalogue de canapés : http://localhost:3000/api/products

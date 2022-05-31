@@ -1,6 +1,7 @@
 # Projet-5-KANAP
 
 Kanap, une marque de canapés qui vend ses produits depuis sa boutique exclusivement. Aujourd’hui, celle-ci souhaiterait avoir une plateforme de e-commerce en plus de sa boutique physique pour vendre ses produits sur Internet.
+![Capture d’écran 2022-05-31 à 17 34 51](https://user-images.githubusercontent.com/94977490/171212865-3e6ba327-4574-4239-a73c-68b040ed08b4.png)
 
 # Architecture générale
 L’application web est composée de 4 pages :

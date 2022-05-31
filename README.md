@@ -17,32 +17,6 @@ back-end. Par exemple, pas de chiffre dans un champ prénom.
 
 # API
 L’API n’est actuellement que dans sa première version. La requête post qu’il faudra formuler pour passer une commande ne prend pas encore en considération la quantité ni la couleur des produits achetés.
-
-
-Tous les produits possèdent les attributs suivants :
-                                      Champ
-colors
-id
-name price imageUrl description altTxt
-Type
-array of string string
-string
-number
-string string string
-                                                                                                                                                                                                                                                                                                                                                     Technologies utilisées HTML, CSS, JavaScript.
+                                                                                                                                                                                                                                                                                                                # Technologies utilisées                                                                                                                                                                                                                                                                                                                  HTML, CSS, JavaScript.
 URL des API
 ● Catalogue de canapés : http://localhost:3000/api/products
-Paramètres des API Chaque API contient 3 paramètres :
-       Verbe Paramètre
-GET /
-GET /{product-ID}
-{product-ID} doit être remplacé par l’id d’un produit
-POST /order
-Corps de la demande prévue
--
--
-Requête JSON contenant un objet de contact et un tableau de produits
-Réponse
-Retourne un tableau de tous les éléments
-Renvoie l'élément correspondant à {product-ID}, identifiant d’un produit
-Retourne l'objet contact, le tableau produits et orderId (string)
